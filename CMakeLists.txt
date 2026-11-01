@@ -317,7 +317,7 @@ if (${EMSCRIPTEN})
 	target_link_options (OcctImportJS PUBLIC -sMODULARIZE=1)
 	target_link_options (OcctImportJS PUBLIC -sEXPORT_NAME='occtimportjs')
 	target_link_options (OcctImportJS PUBLIC -sSTACK_SIZE=10MB)
-	target_link_options (OcctImportJS PUBLIC -sALLOW_MEMORY_GROWTH=1 --no-heap-copy)
+	target_link_options (OcctImportJS PUBLIC -sALLOW_MEMORY_GROWTH=1 -sMAXIMUM_MEMORY=4GB --no-heap-copy)
 	target_link_options (OcctImportJS PUBLIC -fwasm-exceptions)
 	
 	# to check for memory errors
